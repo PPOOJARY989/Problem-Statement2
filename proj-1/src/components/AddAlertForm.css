@@ -1,0 +1,209 @@
+/* AddAlertForm.css */
+
+.add-alert-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #9df9ef; /* Bright Border */
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.add-alert-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #4A90E2;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.add-alert-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.add-alert-form input,
+.add-alert-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-alert-form input:focus,
+.add-alert-form textarea:focus {
+  border-color: #9df9ef;
+  box-shadow: 0px 0px 6px #9df9ef;
+  outline: none;
+}
+
+.add-alert-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.add-alert-form button {
+  background-color: #4A90E2;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: 2px solid #9df9ef;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  animation: buttonPop 0.3s ease;
+}
+
+.add-alert-form button:hover {
+  background-color: #357ABD;
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 15px rgba(57, 203, 173, 0.4);
+}
+
+.add-alert-form button:active {
+  transform: translateY(1px);
+}
+
+@keyframes buttonPop {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Styling for the 'Add Alert' button in the Dashboard */
+.add-alert-button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border: 2px solid #9df9ef;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
+  animation: buttonPop 0.3s ease;
+}
+
+.add-alert-button:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 15px rgba(57, 203, 173, 0.4);
+}
+
+.add-alert-button:active {
+  transform: translateY(1px);
+}
+
+/* Table Styling */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+  background-color: #f9fbfc;
+  border: 2px solid #9df9ef;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.table-container th,
+.table-container td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.table-container th {
+  background-color: #4A90E2;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.table-container th::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #9df9ef;
+  bottom: 0;
+  left: 0;
+  animation: lineSlide 1.5s infinite ease-in-out;
+}
+
+.table-container tr:nth-child(even) {
+  background-color: #f0fcff;
+}
+
+.table-container tr:hover {
+  background-color: #e6f5fc;
+  transition: background-color 0.3s ease;
+}
+
+.table-container td {
+  color: #333;
+}
+
+.table-container td:first-child {
+  font-weight: 600;
+  color: #4A90E2;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+/* Decorative Hover Effect for Table Rows */
+.table-container tr:hover td {
+  color: #357ABD;
+}
+
+@keyframes lineSlide {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0px 0px 5px #9df9ef, 0px 0px 10px #9df9ef;
+  }
+  to {
+    text-shadow: 0px 0px 10px #4A90E2, 0px 0px 15px #4A90E2;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

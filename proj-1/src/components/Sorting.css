@@ -1,0 +1,40 @@
+/* Sorting.css */
+
+.sorting-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  justify-content: flex-start;
+}
+
+/* Styling the select dropdown */
+.sorting-controls select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #d1d9e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4A90E2;
+  background-color: #f8fafc;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover and focus effects */
+.sorting-controls select:hover,
+.sorting-controls select:focus {
+  border-color: #4A90E2;
+  background-color: #eef5ff;
+  color: #333;
+  outline: none;
+  transform: scale(1.05);
+}
+
+/* Adding a subtle drop-shadow on focus */
+.sorting-controls select:focus {
+  box-shadow: 0px 4px 12px rgba(74, 144, 226, 0.3);
+}

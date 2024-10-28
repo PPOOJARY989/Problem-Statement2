@@ -1,0 +1,80 @@
+/* General Table Styling */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Table Header */
+.dashboard-table th {
+  background-color: #00509E;  /* Header color */
+  color: #ffffff;
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 2px solid #004080;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* General Table Cell Styling */
+.dashboard-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+/* Color-coded rows for each alert type */
+.dashboard-table tr[data-type="Type 1"] {
+  background-color: #fdf7e3; /* Light yellow for Type 1 */
+  border-left: 5px solid #F5A623;
+}
+
+.dashboard-table tr[data-type="Type 2"] {
+  background-color: #eef7ee; /* Light green for Type 2 */
+  border-left: 5px solid #7ED321;
+}
+
+.dashboard-table tr[data-type="Type 3"] {
+  background-color: #fde4ec; /* Light pink for Type 3 */
+  border-left: 5px solid #FF69B4; /* Hot pink border for contrast */
+}
+
+/* Hover effect for rows */
+.dashboard-table tr:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Animation for table rows */
+@keyframes rowFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-table tr {
+  animation: rowFadeIn 0.3s ease-in;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-table th, .dashboard-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}

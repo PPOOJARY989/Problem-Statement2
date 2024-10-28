@@ -1,0 +1,58 @@
+/* Footer.css */
+
+.dashboard-footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #4A90E2;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Adding a soft top border gradient for a sleek transition */
+.dashboard-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #A7C7E7, #4A90E2);
+  border-radius: 12px 12px 0 0;
+  z-index: 1;
+}
+
+/* Adding subtle icons or patterns */
+.dashboard-footer::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 150%;
+  height: 60px;
+  background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2), rgba(74, 144, 226, 0));
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Footer text styling */
+.dashboard-footer p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* Hover effect */
+.dashboard-footer p:hover {
+  color: #A7C7E7;
+  transition: color 0.3s ease;
+}
